@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+import './profile_screen.dart';
+import './flex_screen.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: ProfileScreen(),
+      //home: FlexScreen(),
+    );
+  }
+}
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "291835716707",
+    "project_id": "flutter-cookbook-8f703",
+    "storage_bucket": "flutter-cookbook-8f703.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291835716707:android:a8e2753ea7a2ffa0964456",
+        "android_client_info": {
+          "package_name": "nobu.kim.firebase_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291835716707-0th15l1natigu5l05tc2q46f34q6tokf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF8wiK9CgbvsHwtzBo75mnW0QmpCDv12Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291835716707-0th15l1natigu5l05tc2q46f34q6tokf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

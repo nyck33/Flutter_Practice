@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/store_data/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/store_data/build" />
+      <excludeFolder url="file://$MODULE_DIR$/mastering_layout/build" />
+      <excludeFolder url="file://$MODULE_DIR$/mastering_layout/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/master_plan/build" />
+      <excludeFolder url="file://$MODULE_DIR$/master_plan/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ch8_shared_prefs/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ch8_shared_prefs/build" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
