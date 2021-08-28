@@ -15,6 +15,7 @@ import 'dart:convert';
 import './helloWorld.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
+import './frozen_provider.dart';
 //import 'dart:convert';
 
 final helloWorldProvider = Provider((_) => 'Hello');
@@ -62,6 +63,9 @@ class MyHelloApp extends ConsumerWidget {
     print('resp in UI: $resp');
     String? userId = resp.data?.value?.userId.toString();
 
+    final frozenResp = ref.watch(frozenHttpClientProvider);
+    String? frozenTitle = frozenResp.data?.value?.title.toString();
+
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(title: Text('Example')),
@@ -70,6 +74,7 @@ class MyHelloApp extends ConsumerWidget {
                 children: [
                   Text(value),
                   Text(userId ?? ''),
+                  Text(frozenTitle != null ? 'Frozen title: $frozenTitle' : ''),
                 ],
               ),
             )));
