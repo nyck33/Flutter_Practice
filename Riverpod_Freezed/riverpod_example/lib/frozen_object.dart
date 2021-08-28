@@ -24,7 +24,7 @@ abstract class FrozenObject with _$FrozenObject {
   const FrozenObject._();
 
   const factory FrozenObject(
-      {int? userId, int? id, String? title, bool? completed}) = FrozenObject;
+      {int? userId, int? id, String? title, bool? completed}) = _FrozenObject;
 
   factory FrozenObject.fromJson(Map<String, dynamic> json) =>
       _$FrozenObjectFromJson(json);

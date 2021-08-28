@@ -13,15 +13,15 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FrozenObject _$FrozenObjectFromJson(Map<String, dynamic> json) {
-  return FrozenObject.fromJson(json);
+  return _FrozenObject.fromJson(json);
 }
 
 /// @nodoc
 class _$FrozenObjectTearOff {
   const _$FrozenObjectTearOff();
 
-  FrozenObject call({int? userId, int? id, String? title, bool? completed}) {
-    return FrozenObject(
+  _FrozenObject call({int? userId, int? id, String? title, bool? completed}) {
+    return _FrozenObject(
       userId: userId,
       id: id,
       title: title,
@@ -95,24 +95,24 @@ class _$FrozenObjectCopyWithImpl<$Res> implements $FrozenObjectCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $FrozenObjectCopyWith<$Res>
+abstract class _$FrozenObjectCopyWith<$Res>
     implements $FrozenObjectCopyWith<$Res> {
-  factory $FrozenObjectCopyWith(
-          FrozenObject value, $Res Function(FrozenObject) then) =
-      _$FrozenObjectCopyWithImpl<$Res>;
+  factory _$FrozenObjectCopyWith(
+          _FrozenObject value, $Res Function(_FrozenObject) then) =
+      __$FrozenObjectCopyWithImpl<$Res>;
   @override
   $Res call({int? userId, int? id, String? title, bool? completed});
 }
 
 /// @nodoc
-class _$FrozenObjectCopyWithImpl<$Res> extends _$FrozenObjectCopyWithImpl<$Res>
-    implements $FrozenObjectCopyWith<$Res> {
-  _$FrozenObjectCopyWithImpl(
-      FrozenObject _value, $Res Function(FrozenObject) _then)
-      : super(_value, (v) => _then(v as FrozenObject));
+class __$FrozenObjectCopyWithImpl<$Res> extends _$FrozenObjectCopyWithImpl<$Res>
+    implements _$FrozenObjectCopyWith<$Res> {
+  __$FrozenObjectCopyWithImpl(
+      _FrozenObject _value, $Res Function(_FrozenObject) _then)
+      : super(_value, (v) => _then(v as _FrozenObject));
 
   @override
-  FrozenObject get _value => super._value as FrozenObject;
+  _FrozenObject get _value => super._value as _FrozenObject;
 
   @override
   $Res call({
@@ -121,7 +121,7 @@ class _$FrozenObjectCopyWithImpl<$Res> extends _$FrozenObjectCopyWithImpl<$Res>
     Object? title = freezed,
     Object? completed = freezed,
   }) {
-    return _then(FrozenObject(
+    return _then(_FrozenObject(
       userId: userId == freezed
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -144,12 +144,12 @@ class _$FrozenObjectCopyWithImpl<$Res> extends _$FrozenObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$FrozenObject extends FrozenObject with DiagnosticableTreeMixin {
-  const _$FrozenObject({this.userId, this.id, this.title, this.completed})
+class _$_FrozenObject extends _FrozenObject with DiagnosticableTreeMixin {
+  const _$_FrozenObject({this.userId, this.id, this.title, this.completed})
       : super._();
 
-  factory _$FrozenObject.fromJson(Map<String, dynamic> json) =>
-      _$_$FrozenObjectFromJson(json);
+  factory _$_FrozenObject.fromJson(Map<String, dynamic> json) =>
+      _$_$_FrozenObjectFromJson(json);
 
   @override
   final int? userId;
@@ -179,7 +179,7 @@ class _$FrozenObject extends FrozenObject with DiagnosticableTreeMixin {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is FrozenObject &&
+        (other is _FrozenObject &&
             (identical(other.userId, userId) ||
                 const DeepCollectionEquality().equals(other.userId, userId)) &&
             (identical(other.id, id) ||
@@ -201,22 +201,22 @@ class _$FrozenObject extends FrozenObject with DiagnosticableTreeMixin {
 
   @JsonKey(ignore: true)
   @override
-  $FrozenObjectCopyWith<FrozenObject> get copyWith =>
-      _$FrozenObjectCopyWithImpl<FrozenObject>(this, _$identity);
+  _$FrozenObjectCopyWith<_FrozenObject> get copyWith =>
+      __$FrozenObjectCopyWithImpl<_FrozenObject>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$FrozenObjectToJson(this);
+    return _$_$_FrozenObjectToJson(this);
   }
 }
 
-abstract class FrozenObject extends FrozenObject {
-  const factory FrozenObject(
-      {int? userId, int? id, String? title, bool? completed}) = _$FrozenObject;
-  const FrozenObject._() : super._();
+abstract class _FrozenObject extends FrozenObject {
+  const factory _FrozenObject(
+      {int? userId, int? id, String? title, bool? completed}) = _$_FrozenObject;
+  const _FrozenObject._() : super._();
 
-  factory FrozenObject.fromJson(Map<String, dynamic> json) =
-      _$FrozenObject.fromJson;
+  factory _FrozenObject.fromJson(Map<String, dynamic> json) =
+      _$_FrozenObject.fromJson;
 
   @override
   int? get userId => throw _privateConstructorUsedError;
@@ -228,6 +228,6 @@ abstract class FrozenObject extends FrozenObject {
   bool? get completed => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $FrozenObjectCopyWith<FrozenObject> get copyWith =>
+  _$FrozenObjectCopyWith<_FrozenObject> get copyWith =>
       throw _privateConstructorUsedError;
 }
