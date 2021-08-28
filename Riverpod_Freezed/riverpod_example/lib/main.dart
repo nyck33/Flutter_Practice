@@ -65,7 +65,7 @@ class MyHelloApp extends ConsumerWidget {
 
     final frozenResp = ref.watch(frozenHttpClientProvider);
     String? frozenTitle = frozenResp.data?.value?.title.toString();
-
+    print('frozen value main: $frozenTitle');
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(title: Text('Example')),
