@@ -17,6 +17,7 @@ class WeatherNotifier extends StateNotifier<WeatherState> {
   //final WeatherRepository _weatherRepository;
   final WeatherService _weatherService;
   //WeatherState _weatherState = Initial();
+  late Weather weather;
 
   WeatherNotifier(this._weatherService) : super(Initial());
 
@@ -24,7 +25,7 @@ class WeatherNotifier extends StateNotifier<WeatherState> {
     try {
       //_weatherState = Loading();
       state = Loading(); //WeatherState.loading();
-      final weather = await _weatherService.callWeatherApi(cityName);
+      weather = await _weatherService.callWeatherApi(cityName);
       state = Loaded(weather);
       //return weather;
     } //on NetworkException catch (failure){
