@@ -9,7 +9,7 @@ import '../services/weather_state.dart';
 import './input_field.dart';
 
 class WeatherSearchPage extends HookWidget {
-  final WeatherState weatherState = useProvider(weatherProvider.state);
+  final WeatherState weatherState = useProvider(weatherProvider.state!);
   final WeatherNotifier weatherNotifier = useProvider(weatherProvider);
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class WeatherSearchPage extends HookWidget {
       body: weatherState.when(
         initial: _buildInputField,
         loading: _buildWeatherLoading,
-        loaded: _buildWeatherLoaded(weatherState, weatherNotifier),
+        loaded: _buildWeatherLoaded,
         error: _buildErrorSnackBar,
       ),
     );
@@ -42,13 +42,12 @@ class WeatherSearchPage extends HookWidget {
     );
   }
 
-  Widget _buildWeatherLoaded(
-      WeatherState weatherState, WeatherNotifier weatherNotifier) {
+  Widget _buildWeatherLoaded() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Text(
-          weatherState.toString(),
+          weatherNotifier.weather.toString(),
           style: TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.w700,
@@ -58,7 +57,7 @@ class WeatherSearchPage extends HookWidget {
           "Other data here",
           style: TextStyle(fontSize: 80),
         ),
-        InputField(weatherNotifier),
+        //InputField(weatherNotifier),  put reset button
       ],
     );
   }

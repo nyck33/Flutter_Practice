@@ -2,12 +2,12 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../model/weather.dart';
+import './weather.dart';
 import '../../repositories/weather_repository.dart';
-import './failure.dart';
+import '../services/failure.dart';
 
 part 'weather_state.freezed.dart';
-part 'weather_state.g.dart';
+//part 'weather_state.g.dart';
 
 @freezed
 abstract class WeatherState with _$WeatherState {

@@ -6,7 +6,7 @@ import '../model/weather.dart';
 class InputField extends StatelessWidget {
   final WeatherNotifier _weatherNotifier;
   //final Weather _weather;
-  InputField(this._weatherNotifier)//, this._weather);
+  InputField(this._weatherNotifier); //, this._weather);
 
   @override
   Widget build(BuildContext context) {
