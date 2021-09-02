@@ -5,9 +5,12 @@ import 'package:weather_freezed_riverpod/services/weather_service.dart';
 import '../controllers/weather_notifier.dart';
 import '../repositories/weather_repository.dart';
 import '../services/weather_service.dart';
-import '../model/weather.dart';
+import '../models/weather.dart';
 
 //cascades nesting for instantiation
+
+final repositoryProvider =
+    StateNotifierProvider((ref) => ApiWeatherRepository());
 
 final apiWeatherRepository = ApiWeatherRepository();
 final apiWeatherServiceProvider = WeatherService(apiWeatherRepository);

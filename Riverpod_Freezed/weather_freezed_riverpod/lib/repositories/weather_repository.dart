@@ -4,7 +4,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../model/weather.dart';
+import '../models/weather.dart';
 import './api_key.dart';
 import './network_exception.dart';
 
@@ -15,7 +15,7 @@ abstract class WeatherRepository {
   Future<dynamic> fetchWeather(String cityName);
 }
 
-class ApiWeatherRepository implements WeatherRepository {
+class ApiWeatherRepository implements WeatherRepository, StateNotifier {
   //String get authority => _authority;
   //String get path => _path;
   //String get apiKey => "secret api_key";
@@ -23,6 +23,9 @@ class ApiWeatherRepository implements WeatherRepository {
   //set path(String newPath) => _path = newPath;
   //set newApiKey(String key) => "cannot reset api key";
   //late final newWeather;
+  late final _weather;
+  ApiWeatherRepository() : super();
+
   @override
   Future<dynamic> fetchWeather(String cityName) async {
     this._path += cityName;
@@ -31,6 +34,7 @@ class ApiWeatherRepository implements WeatherRepository {
     http.Response response = await http.get(url);
 
     if (response.statusCode == HttpStatus.ok) {
+      _weather = response.body;
       return response.body;
     } else {
       print('http error: ${response.statusCode}');

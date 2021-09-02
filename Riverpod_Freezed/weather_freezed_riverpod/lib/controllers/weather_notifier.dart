@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:weather_freezed_riverpod/repositories/network_exception.dart';
-import 'package:weather_freezed_riverpod/services/failure.dart';
+import 'package:weather_freezed_riverpod/models/failure.dart';
 
 import '../services/weather_service.dart';
-import '../model/weather.dart';
-import '../services/weather_state.dart';
+import '../models/weather.dart';
+import '../models/weather_state.dart';
 import '../repositories/weather_repository.dart';
 
 //part 'weather_notifier.freezed.dart';

@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
-import 'package:weather_freezed_riverpod/services/weather_state.dart';
+import 'package:weather_freezed_riverpod/models/weather_state.dart';
 
 import '../repositories/weather_repository.dart';
-import '../model/weather.dart';
+import '../models/weather.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

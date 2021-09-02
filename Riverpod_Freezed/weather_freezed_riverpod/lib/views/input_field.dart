@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_freezed_riverpod/controllers/weather_notifier.dart';
 import '../providers/providers.dart';
-import '../model/weather.dart';
+import '../models/weather.dart';
 
 class InputField extends StatelessWidget {
   final WeatherNotifier _weatherNotifier;

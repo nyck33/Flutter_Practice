@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import './weather.dart';
 import '../../repositories/weather_repository.dart';
-import '../services/failure.dart';
+import './failure.dart';
 
 part 'weather_state.freezed.dart';
 //part 'weather_state.g.dart';

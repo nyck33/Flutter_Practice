@@ -3,9 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../controllers/weather_notifier.dart';
-import '../model/weather.dart';
+import '../models/weather.dart';
 import '../providers/providers.dart';
-import '../services/weather_state.dart';
+import '../models/weather_state.dart';
 import './input_field.dart';
 
 class WeatherSearchPage extends HookWidget {
